@@ -37,7 +37,6 @@ class LGFunctions {
     );
   }
 
-
 //method to  reboot all VM's
 
   Future<void> rebootLG() async {
@@ -186,7 +185,8 @@ class LGFunctions {
     } catch (e) {
       return Future.error(e);
     }
-  }//method to upload image and display on rightmost screen
+  } //method to upload image and display on rightmost screen
+
   Future openLogos() async {
     SSHClient client = SSHClient(
       host: sshclientprovider.ip,

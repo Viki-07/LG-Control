@@ -9,7 +9,7 @@ class SSHClientProvider extends ChangeNotifier {
   String _password = '12';
   int _port = 22;
   int _rigs = 3;
- 
+  bool _isConnected = false;
 
   SSHClient? get sshClient => _sshClient;
   String get ip => _ip;
@@ -17,7 +17,7 @@ class SSHClientProvider extends ChangeNotifier {
   String get password => _password;
   int get port => _port;
   int get rigs => _rigs;
-
+  bool get isConnected => _isConnected;
 
   set sshClient(SSHClient? value) {
     _sshClient = value;
@@ -49,5 +49,8 @@ class SSHClientProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-
+  set isConnected(bool value) {
+    _isConnected = value;
+    notifyListeners();
+  }
 }
