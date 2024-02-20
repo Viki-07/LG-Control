@@ -162,6 +162,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         connectionStatusDialog(
                             sshclientprovider.ip + " is Connected !", context);
                       } catch (e) {
+                        Navigator.pop(context);
                         connectionStatusDialog(
                             sshclientprovider.ip + " is not reachable !",
                             context);
