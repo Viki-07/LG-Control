@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:dartssh2/dartssh2.dart';
+
 
 //provider class for state management
 class SSHClientProvider extends ChangeNotifier {
-  SSHClient? _sshClient;
+
   String _ip = '192.168.201.3';
   String _username = 'lg';
   String _password = '12';
@@ -11,7 +11,7 @@ class SSHClientProvider extends ChangeNotifier {
   int _rigs = 3;
   bool _isConnected = false;
 
-  SSHClient? get sshClient => _sshClient;
+
   String get ip => _ip;
   String get username => _username;
   String get password => _password;
@@ -19,10 +19,7 @@ class SSHClientProvider extends ChangeNotifier {
   int get rigs => _rigs;
   bool get isConnected => _isConnected;
 
-  set sshClient(SSHClient? value) {
-    _sshClient = value;
-    notifyListeners();
-  }
+
 
   set ip(String value) {
     _ip = value;

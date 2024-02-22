@@ -1,4 +1,4 @@
-import 'package:dartssh2/dartssh2.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:lgcontrol/kml/LookAt.dart';
@@ -91,9 +91,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             SizedBox(
-                height: 400,
-                width: 800,
-                child: Image.asset('assets/lglogo.png')),
+              height: 400,
+              width:  800,
+              child: Image.network('https://hips.hearstapps.com/hmg-prod/images/cute-photos-of-cats-looking-at-camera-1593184780.jpg?crop=0.6672958942897593xw:1xh;center,top&resize=980:*'),
+            ),
+            // SizedBox(
+            //     height: 400,
+            //     width: 800,
+            //     child: Image.asset('assets/lglogo.png')),
             const SizedBox(
               height: 100,
             ),

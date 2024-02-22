@@ -181,7 +181,7 @@ class LGFunctions {
     try {
       await client.connect();
       return await client
-          .execute("echo '$blank' > /var/www/html/kml/slave_${rigs - 1}.kml");
+          .execute("echo '$blank' > /var/www/html/kml/slave_${1}.kml");
     } catch (e) {
       return Future.error(e);
     }
